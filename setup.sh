@@ -25,7 +25,8 @@ sudo apt install zsh -y
 # set shell to zsh
 chsh -s $(which zsh)
 # add bash_aliases configuration to zsh
-echo "\nif [ -f ~/.bash_aliases ]; then
+echo "
+if [ -f ~/.bash_aliases ]; then
 .  ~/.bash_aliases
 fi
 " >> ~/.zshrc

@@ -82,8 +82,6 @@ echo "alias v:c=\"venv:create\"" >> ~/.bash_aliases
 echo "alias v:d=\"venv:delete\"" >> ~/.bash_aliases
 echo "alias v:l=\"venv:list\"" >> ~/.bash_aliases
 
-
-
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 

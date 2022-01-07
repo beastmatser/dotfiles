@@ -20,6 +20,11 @@ sudo npm install -g yarn
 sudo apt install zsh -y
 # set shell to zsh
 chsh -s $(which zsh)
+# add bash_aliases configuration to zsh
+echo "if [ -f ~/.bash_aliases ]; then
+.  ~/.bash_aliases
+fi
+" >> ~/.zshrc
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended

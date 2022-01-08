@@ -13,6 +13,9 @@ echo "alias python=python3.10" >> ~/.bash_aliases
 sudo apt install python3.10-venv -y
 mkdir ~/.venv
 
+# Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
 # Install nodejs 17.x
 curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 sudo apt install -y nodejs
@@ -22,14 +25,17 @@ sudo npm install -g yarn
 
 # Install zsh
 sudo apt install zsh -y
+
 # set shell to zsh
 chsh -s $(which zsh)
+
 # add bash_aliases configuration to zsh
 echo "
 if [ -f ~/.bash_aliases ]; then
 .  ~/.bash_aliases
 fi
 " >> ~/.zshrc
+
 # add activate venv command
 echo "
 function venv:activate () {
@@ -62,6 +68,7 @@ function venv:delete {
         echo  \"\$1 is not a valid virtual environment\"
     fi
 }" >> ~/.zshrc
+
 # add a list venv command
 echo "
 function venv:list {

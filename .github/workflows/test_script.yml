@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: "Run bash script"
-        run: bash setup.sh"
+        run: bash setup.sh

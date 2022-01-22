@@ -18,11 +18,11 @@ mkdir ~/.venv
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 # Install a complete toolchain
 sudo apt-get update
-sudo apt install build-essential
+sudo apt install build-essential -y
 
 # Install nodejs 17.x
 curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash - -y
-sudo apt install -y nodejs
+sudo apt install nodejs -y
 
 # Install yarn
 sudo npm install -g yarn

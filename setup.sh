@@ -27,21 +27,12 @@ sudo apt install nodejs -y
 # Install yarn
 sudo npm install -g yarn
 
-# Install zsh
-sudo apt install zsh -y
-
-# set shell to zsh
-chsh -s $(which zsh)
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-#~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Setup config files
 curl -s https://raw.githubusercontent.com/beastmatser/linux-terminal-setup/master/git/.gitconfig >~/.gitconfig

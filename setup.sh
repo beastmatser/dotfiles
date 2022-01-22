@@ -5,6 +5,10 @@ sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt update
 sudo apt install python3.10 -y
+sudo apt install python3.9 -y
+sudo apt install python3.8 -y
+sudo apt install python3.7 -y
+sudo apt install python3.6 -y
 
 # Install venv for python3.10
 sudo apt install python3.10-venv -y
@@ -17,7 +21,7 @@ sudo apt-get update
 sudo apt install build-essential
 
 # Install nodejs 17.x
-curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash - -y
 sudo apt install -y nodejs
 
 # Install yarn
@@ -30,7 +34,7 @@ sudo apt install zsh -y
 chsh -s $(which zsh)
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

@@ -1,4 +1,4 @@
-# Linux-terminal-setup
+# Dotfiles
 
 A personal script to setup a linux terminal.
 

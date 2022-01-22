@@ -1,0 +1,9 @@
+echo "alias python=python3.10" >>~/.bash_aliases
+echo "alias v:activate=\"venv:activate\""
+echo "alias v:create=\"venv:create\""
+echo "alias v:delete=\"venv:delete\""
+echo "alias v:list=\"venv:list\""
+echo "alias v:a=\"venv:activate\""
+echo "alias v:c=\"venv:create\""
+echo "alias v:d=\"venv:delete\""
+echo "alias v:l=\"venv:list\""

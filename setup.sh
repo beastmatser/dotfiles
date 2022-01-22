@@ -42,5 +42,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # Setup config files
 curl -s https://raw.githubusercontent.com/beastmatser/linux-terminal-setup/master/git/.gitconfig >~/.gitconfig
 curl -s https://raw.githubusercontent.com/beastmatser/linux-terminal-setup/master/zsh/.zshrc >~/.zshrc
-curl -s https://raw.githubusercontent.com/beastmatser/linux-terminal-setup/master/zsh/.zshrc_history >~/.zsh_history
+curl -s https://raw.githubusercontent.com/beastmatser/linux-terminal-setup/master/zsh/.zsh_history >~/.zsh_history
 curl -s https://raw.githubusercontent.com/beastmatser/linux-terminal-setup/master/bash/.bash_aliases >~/.bash_aliases

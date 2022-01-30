@@ -8,6 +8,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'github/copilot.vim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 call plug#end()
 
@@ -21,6 +22,9 @@ set cursorline
 set cursorcolumn
 set ignorecase
 set history=500
+set expandtab
 
 set laststatus=2
 let g:lightline = {'colorscheme': 'wombat'}
+
+nmap <F2> <Plug>(coc-rename)

@@ -129,6 +129,7 @@ function venv:create() {
         echo "Creating virtual environment..."
         python3.10 -m venv ~/.venv/$1
         source ~/.venv/$1/bin/activate
+        pip install -U black
     fi
 }
 
@@ -150,4 +151,11 @@ function venv:list {
     fi
 }
 
+function ols.json {
+    ln -s ~/ols.json .
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=$PATH:$HOME/Odin
+export PATH=$PATH:$HOME/.nimble/bin

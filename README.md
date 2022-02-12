@@ -2,7 +2,7 @@
 
 To run:
 ```sh
-git clone http://github.com/beasmatser/dotfiles && cd dotfiles && source bootstrap.sh
+git clone http://github.com/beastmatser/dotfiles && cd dotfiles && source bootstrap.sh
 ```
 
 Install programs using this gist:

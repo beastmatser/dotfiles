@@ -1,3 +1,6 @@
+let mapleader = ":"
+
+" Plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
@@ -9,9 +12,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'Tetralux/odin.vim'
+Plug 'cespare/vim-toml'
+Plug 'ap/vim-css-color'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
+" basic settings
 syntax enable
 set background=dark
 colorscheme nord
@@ -27,4 +35,28 @@ set expandtab
 set laststatus=2
 let g:lightline = {'colorscheme': 'wombat'}
 
+" Some keybindings
 nmap <F2> <Plug>(coc-rename)
+nmap <C-O> :NERDTreeToggle<CR>
+
+fun! DeleteFileAndCloseBuffer()
+  call delete(expand('%:p')) | q! | endif
+endfun
+
+nnoremap <Leader>rm :call DeleteFileAndCloseBuffer()<CR>
+
+" Autoclose some tokens
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
+
+" Trim trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()

@@ -16,6 +16,8 @@ Plug 'Tetralux/odin.vim'
 Plug 'cespare/vim-toml'
 Plug 'ap/vim-css-color'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'vimwiki/vimwiki'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 call plug#end()
 
@@ -32,6 +34,8 @@ set ignorecase
 set history=500
 set expandtab
 set wildmenu
+set nocompatible
+filetype plugin on
 
 set laststatus=2
 let g:lightline = {'colorscheme': 'wombat'}
@@ -64,3 +68,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" vimwiki
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+nmap <C-b> <Plug>MarkdownPreview

@@ -160,6 +160,7 @@ function ols.json {
 export PATH=$PATH:$HOME/Odin
 export PATH=$PATH:$HOME/.nimble/bin
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/zig
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

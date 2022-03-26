@@ -10,7 +10,7 @@ Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'Tetralux/odin.vim'
 Plug 'cespare/vim-toml'
@@ -23,7 +23,7 @@ call plug#end()
 syntax enable
 set background=dark
 colorscheme nord
-
+set smartindent
 set number
 set nobackup
 set cursorline
@@ -31,6 +31,7 @@ set cursorcolumn
 set ignorecase
 set history=500
 set expandtab
+set wildmenu
 
 set laststatus=2
 let g:lightline = {'colorscheme': 'wombat'}
@@ -39,11 +40,14 @@ let g:lightline = {'colorscheme': 'wombat'}
 nmap <F2> <Plug>(coc-rename)
 nmap <C-O> :NERDTreeToggle<CR>
 
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 fun! DeleteFileAndCloseBuffer()
   call delete(expand('%:p')) | q! | endif
 endfun
 
-nnoremap <Leader>rm :call DeleteFileAndCloseBuffer()<CR>
+nnoremap <Leader>rm<CR> :call DeleteFileAndCloseBuffer()<CR>
 
 " Autoclose some tokens
 ino " ""<left>

@@ -1,8 +1,9 @@
 # Dotfiles
 
-To run:
+My personal dotfiles, managed using stow.
+
 ```sh
-git clone http://github.com/beastmatser/dotfiles && cd dotfiles && source bootstrap.sh
+git clone http://github.com/beastmatser/dotfiles && cd dotfiles
 ```
 
 Install programs using this gist:

@@ -75,7 +75,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     sudo
-    copydir
+    copypath
     copyfile
     dirhistory
     zsh-interactive-cd

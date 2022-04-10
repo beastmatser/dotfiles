@@ -1,11 +1,11 @@
 [core]
-    editor = code --wait
-    excludesfile = ~/.gitignore
+editor = code --wait
+excludesfile = ~/.gitignore
+symlinks = true
 
 [user]
-    name = "beastmatser"
-    email = "79206232+beastmatser@users.noreply.github.com"
+name = "beastmatser"
+email = "79206232+beastmatser@users.noreply.github.com"
 
 [init]
-    defaultBranch = main
-
+defaultBranch = main

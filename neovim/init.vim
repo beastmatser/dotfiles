@@ -72,3 +72,5 @@ autocmd BufWinLeave * call clearmatches()
 " vimwiki
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 nmap <C-b> <Plug>MarkdownPreview
+
+hi Visual ctermbg=darkgrey ctermfg=none

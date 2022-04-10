@@ -59,6 +59,5 @@ plug "zsh-users/zsh-syntax-highlighting"
 oh-my-plug "sudo"
 oh-my-plug "copyfile"
 oh-my-plug "copypath"
-oh-my-plug "vi-mode"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

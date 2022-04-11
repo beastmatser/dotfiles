@@ -53,14 +53,6 @@ endfun
 
 nnoremap <Leader>rm<CR> :call DeleteFileAndCloseBuffer()<CR>
 
-" Autoclose some tokens
-ino " ""<left>
-ino ' ''<left>
-ino ( ()<left>
-ino [ []<left>
-ino { {}<left>
-ino {<CR> {<CR>}<ESC>O
-
 " Trim trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -73,4 +65,5 @@ autocmd BufWinLeave * call clearmatches()
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 nmap <C-b> <Plug>MarkdownPreview
 
-hi Visual ctermbg=darkgrey ctermfg=none
+hi Visual ctermbg=darkgrey
+

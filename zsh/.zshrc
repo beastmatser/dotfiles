@@ -55,9 +55,14 @@ eval "$(pyenv init --path)"
 # Plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
 # plug "sindresorhus/pure" # Needs to be run once
 oh-my-plug "sudo"
 oh-my-plug "copyfile"
 oh-my-plug "copypath"
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="%F{green}%K%1%f"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

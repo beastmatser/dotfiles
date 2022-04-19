@@ -1,6 +1,15 @@
 set fish_greeting
 
+# Path variables
+fish_add_path $HOME/bin
+fish_add_path $HOME/Odin
+fish_add_path $HOME/ols
+fish_add_path $HOME/.cargo
+fish_add_path $HOME/v
+fish_add_path $HOME/.nimble/bin
+fish_add_path /usr/local/go/bin
 
+# Theme: clearance (with minor changes)
 function _git_branch_name
   echo (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
 end
@@ -17,6 +26,8 @@ function fish_prompt
   set -l red (set_color red)
   set -l blue (set_color blue)
   set -l green (set_color green)
+  set -l brblack (set_color brblack)
+  set -l magenta (set_color magenta)
   set -l normal (set_color normal)
 
   set -l cwd $blue(pwd | sed "s:^$HOME:~:")
@@ -39,9 +50,9 @@ function fish_prompt
     set -l git_branch (_git_branch_name)
 
     if [ (_git_is_dirty) ]
-      set git_info '(' $yellow $git_branch "±" $normal ')'
+      set git_info "*" $brblack $git_branch
     else
-      set git_info '(' $green $git_branch $normal ')'
+      set git_info $green $git_branch $normal
     end
     echo -n -s ' ' $git_info $normal
   end
@@ -53,6 +64,6 @@ function fish_prompt
 
   # Terminate with a nice prompt char
   echo -e ''
-  echo -e -n -s $prompt_color '⟩ ' $normal
+  echo -e -n -s $magenta '❯ ' $normal
 end
 

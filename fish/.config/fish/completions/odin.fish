@@ -1,0 +1,1 @@
+/home/maurits/dotfiles/odin-fish-completions/completions/odin.fish

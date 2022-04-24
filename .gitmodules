@@ -1,0 +1,3 @@
+[submodule "odin-fish-completions"]
+path = fish/.config/fish/completions/odin-fish-completions
+url = https://github.com/beastmatser/odin-fish-completions

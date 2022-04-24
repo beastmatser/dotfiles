@@ -7,17 +7,18 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim', { 'for': 'editorconfig' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'Tetralux/odin.vim'
-Plug 'cespare/vim-toml'
+Plug 'Tetralux/odin.vim', { 'for': 'odin' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'ap/vim-css-color'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'vimwiki/vimwiki'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+Plug 'vimwiki/vimwiki', { 'for': 'markdown' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': 'markdown' }
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
@@ -32,13 +33,15 @@ set cursorline
 set cursorcolumn
 set ignorecase
 set history=500
-set expandtab
 set wildmenu
 set nocompatible
 filetype plugin on
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 set laststatus=2
-let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {'colorscheme': 'one'}
 
 " Some keybindings
 nmap <F2> <Plug>(coc-rename)
@@ -61,8 +64,6 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" vimwiki
-let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 nmap <C-b> <Plug>MarkdownPreview
 
 hi Visual ctermbg=darkgrey

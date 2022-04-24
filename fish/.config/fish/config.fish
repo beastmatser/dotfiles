@@ -1,13 +1,22 @@
 set fish_greeting
 
+
+if status is-interactive
+  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+end
+
+# pyenv
+status is-login; and pyenv init --path | source
+
 # Path variables
 fish_add_path $HOME/bin
 fish_add_path $HOME/Odin
 fish_add_path $HOME/ols
-fish_add_path $HOME/.cargo
+fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/v
 fish_add_path $HOME/.nimble/bin
-fish_add_path /usr/local/go/bin
+fish_add_path $HOME/go
 
 # Theme: clearance (with minor changes)
 function _git_branch_name
